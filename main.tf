@@ -1,3 +1,12 @@
+terraform {
+  cloud {
+    hostname     = "app.terraform.io"
+    organization = "testtraining23"
+    workspaces {
+      tags = ["hashicupsBackend"]
+    }
+  }
+
 provider "aws" {
   region = var.region
 }
